@@ -1,0 +1,24 @@
+.size-model {
+    position: absolute;
+    width: 100%;
+    left: 0px;
+    top: 0px;
+    z-index: 11111111;
+    background: #0000002e;
+    height: 100%;
+}
+
+.model-body {
+    background-color: #fff;
+    border-radius: 6px;
+    width: 50%;
+    padding: 30px;
+    margin: auto;
+    text-align: center;
+}
+
+.model-body label,
+.model-body input {
+    width: 100%;
+    display: inline-block;
+}
