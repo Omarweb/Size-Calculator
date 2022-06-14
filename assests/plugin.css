@@ -1,11 +1,12 @@
 .size-model {
-    position: absolute;
+    position: fixed;
     width: 100%;
     left: 0px;
     top: 0px;
     z-index: 11111111;
     background: #0000002e;
     height: 100%;
+
 }
 
 .model-body {
@@ -15,10 +16,226 @@
     padding: 30px;
     margin: auto;
     text-align: center;
+    position: relative;
 }
 
-.model-body label,
-.model-body input {
-    width: 100%;
+.size-model .model-body label {
+    width: 35%;
     display: inline-block;
+    font-size: 14px;
+    color: #163f55;
+    font-weight: 700;
+}
+
+.size-form .row .field::after {
+    content: 'cm';
+    position: absolute;
+    right: -1px;
+    background: #000;
+    padding: 8px;
+    font-size: 11px;
+    /* height: 78%; */
+    font-family: revert;
+    font-weight: 900;
+    line-height: 19px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    top: 0px;
+}
+
+.size-model.hide {
+    display: none;
+}
+
+.size-model .close-size {
+    position: absolute;
+    top: 7px;
+    left: 9px;
+    background: none;
+    border: 0px;
+}
+
+
+
+.size-form input[type="submit"] {
+    width: 25%;
+    display: block;
+    margin: auto;
+    margin-top: 14px;
+    border: 1px solid #9b9b9b;
+    border-radius: 5px;
+}
+
+.size-form .row {
+    width: 47%;
+    display: flex;
+    margin-bottom: 16px;
+    margin-right: 3%;
+    position: relative;
+    align-items: baseline;
+}
+
+.size-model .size-form {
+    width: 65%;
+    display: inline-block;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.size-model .size-form label {
+    text-align: left;
+}
+
+.size-model .model-body .field {
+    width: 53%;
+    position: relative;
+    display: flex;
+}
+
+.size-model .model-body input {
+    width: 100%;
+    text-align: center;
+    border-radius: 3px;
+    border: 1px solid rgb(224, 224, 224);
+    padding: 9px;
+    font-size: 14px;
+    text-align: left;
+}
+
+.size-model .model-body .submit {
+    width: 25%;
+    text-align: center;
+    background: #202020;
+    color: #fff;
+    border-radius: 6px;
+}
+
+.size-model .size span {
+    animation: fadeIn 5s;
+    -webkit-animation: fadeIn 5s;
+    -moz-animation: fadeIn 5s;
+    -o-animation: fadeIn 5s;
+    -ms-animation: fadeIn 5s;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.btn-calc {
+    background: #000;
+    color: #fff;
+    padding: 15px;
+    font-size: 15px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+.size-model .content img {
+    width: 186px;
+}
+
+.size-model .content {
+    width: 35%;
+    display: inline-block;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+
+/* #### None Desktops #### */
+@media screen and (max-width: 1024px) {
+
+    .size-model .size-form,
+    .size-form .row,
+    .size-model .model-body label,
+    .size-model .model-body input,
+    .size-model .model-body .field {
+        width: 100%;
+    }
+
+    .model-body {
+        width: 77%;
+    }
+
+    .size-model .content {
+        display: none;
+    }
+
+    .size-model .model-body .submit {
+        width: 65%;
+    }
+
+    .row,
+    .size-model .model-body label {
+        text-align: center;
+    }
+
+    .size-form .row {
+        display: inline-block;
+    }
+
+    .size-model .model-body .field {
+        display: flex;
+    }
 }

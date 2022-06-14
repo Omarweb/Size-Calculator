@@ -17,30 +17,51 @@ function sizeCalAssests() {
 }
 
 function calcBtn() { 
-    echo '<button class="btn-calc" >' . __( "Size Calcutor", "sizecal" )  . '</button>';
+    echo '<button class="btn-calc button " >' . __( "Size Calcutor", "sizecal" )  . '</button>';
     
 }
 
 function model(){
-    echo    '<div class="size-model">
+    echo    '<div class="size-model hide">
         <div class="model-body">
+        <button class="close-size">x</button>
+        <h3>Your ideal size a few steps!</h3>
+        <div class="form-container">
+        <div class="content">
+        <img src="'. plugin_dir_url( __FILE__ )."/img/body.png".'" />
+        </div>
         <form class="size-form">
 
          
-
+        <div class="row">
             <label for="lname">Height:</label>
-            <input type="text" id="height" name="height" value="180">
-
+            <div class="field">
+            <input type="text" id="height" name="height" placeholder="171">
+            </div>
+</div>
+<div class="row">
             <label for="lname">Chest:</label>
-            <input type="text" id="chest" name="chest" value="100" >
+            <div class="field">
+            <input type="text" id="chest" name="chest" placeholder="100" >
+            </div>
+            </div>
+            <div class="row">
             <label for="lname">Waist:</label>
-            <input type="text" id="waist" name="waist" value="84">
+            <div class="field">
+            <input type="text" id="waist" name="waist" " placeholder="84">
+            </div>
+            </div>
+<div class="row">
             <label for="lname">Hip:</label>
-            <input type="text" id="hip" name="hip" value="98">
+            <div class="field">
+            <input type="text" id="hip" name="hip"  placeholder="92">
+            </div>
+            </div>
 
-            <input type="submit" value="Submit">
+            <input type="submit" class="submit" value="Submit">
         </from>
-        <div class="size"></div>
+        </div>
+        <div class="size"><span></span></div>
         </div>
     </div>';
 }
