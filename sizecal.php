@@ -36,25 +36,25 @@ function model(){
         <div class="row">
             <label for="lname">Height:</label>
             <div class="field">
-            <input type="text" id="height" name="height" placeholder="171">
+            <input type="text" id="height" name="height" placeholder="171" value="194">
             </div>
 </div>
 <div class="row">
             <label for="lname">Chest:</label>
             <div class="field">
-            <input type="text" id="chest" name="chest" placeholder="100" >
+            <input type="text" id="chest" name="chest" placeholder="100" value="113">
             </div>
             </div>
             <div class="row">
             <label for="lname">Waist:</label>
             <div class="field">
-            <input type="text" id="waist" name="waist" " placeholder="84">
+            <input type="text" id="waist" name="waist" " placeholder="84" value="102">
             </div>
             </div>
 <div class="row">
             <label for="lname">Hip:</label>
             <div class="field">
-            <input type="text" id="hip" name="hip"  placeholder="92">
+            <input type="text" id="hip" name="hip"  placeholder="92" value="113">
             </div>
             </div>
 

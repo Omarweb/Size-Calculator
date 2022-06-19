@@ -19,7 +19,32 @@ const sizes = {
         chest: [101, 104],
         waist: [89, 92],
         hip: [101, 104]
-    }
+    },
+    XL: {
+        height: [183, 190],
+        chest: [105, 108],
+        waist: [93, 96],
+        hip: [105, 108]
+    },
+    XXL: {
+        height: [191, 195],
+        chest: [109, 112],
+        waist: [97, 100],
+        hip: [109, 112]
+    },
+    XXXL: {
+        height: [196, 200],
+        chest: [113, 118],
+        waist: [101, 106],
+        hip: [113, 118]
+    },
+    XXXXL: {
+        height: [201, 205],
+        chest: [119, 124],
+        waist: [107, 112],
+        hip: [119, 124]
+    },
+
 }
 
 function onlyNumbers(array) {
@@ -39,7 +64,7 @@ function onlyNumbers(array) {
 
 function getMaxPart(obj) {
 
-    const max = [sizes.L.height[1], sizes.L.chest[1], sizes.L.waist[1], sizes.L.hip[1]];
+    const max = [sizes.XXXXL.height[1], sizes.XXXXL.chest[1], sizes.XXXXL.waist[1], sizes.XXXXL.hip[1]];
 
 
     const cal = Object.keys(obj).map((key, index) => [key, Math.abs(obj[key] - max[index])]);
@@ -84,8 +109,12 @@ function printSize(error = false, size) {
     sizecontainer.textContent = '';
     setTimeout(() => {
         if (!size) sizecontainer.innerHTML = '<span>No size for you</span>';
-        if (size === 'L') sizecontainer.innerHTML = '<span>Your size is Large</span>';
         if (size === 'M') sizecontainer.innerHTML = '<span>Your size is Medium</span>';
+        if (size === 'L') sizecontainer.innerHTML = '<span>Your size is Large</span>';
+        if (size === 'XL') sizecontainer.innerHTML = '<span>Your size is XL</span>';
+        if (size === 'XXL') sizecontainer.innerHTML = '<span>Your size is XXL</span>';
+        if (size === 'XXXL') sizecontainer.innerHTML = '<span>Your size is 3XL</span>';
+        if (size === 'XXXXL') sizecontainer.innerHTML = '<span>Your size is 4XL</span>';
     }, 500);
 
 
